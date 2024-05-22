@@ -9,12 +9,12 @@
     </style>
 </head>
 <body>
-    <div id="terminal">Welcome to the terminal game. Type 'start' to begin...</div>
+    <div id="terminal">Hi, welcome to my page.</div>
     <script>
         const terminal = document.getElementById('terminal');
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') {
-                terminal.innerHTML += '<br>You typed: ' + e.target.value;
+                terminal.innerHTML += '<br>@Guest: ' + e.target.value;
                 e.target.value = '';
             }
         });
