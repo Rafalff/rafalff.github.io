@@ -1,7 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Terminal Game</title>
+    <style>
+        body { background-color: #000; color: #0f0; font-family: monospace; }
+        #terminal { margin: 20px; }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pagess.</p>
+    <div id="terminal">Welcome to the terminal game. Type 'start' to begin...</div>
+    <script>
+        const terminal = document.getElementById('terminal');
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                terminal.innerHTML += '<br>You typed: ' + e.target.value;
+                e.target.value = '';
+            }
+        });
+    </script>
 </body>
 </html>
